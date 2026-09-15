@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopMate AI - Personalized Shopping Assistant</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">🛍️ ShopMate <span>AI</span></div>
+    <div class="tagline">Personalized shopping assistance</div>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SMART SHOPPING ASSISTANT</p>
+        <h1>Find the right product<br><span>for you.</span></h1>
+        <p class="hero-text">Ask in simple language. Get personalized recommendations with real product images, prices and ratings.</p>
+        <div class="quick-prompts">
+          <button onclick="usePrompt('best phone under 50000')">📱 Phone under ₹50,000</button>
+          <button onclick="usePrompt('best headphones under 30000')">🎧 Headphones</button>
+          <button onclick="usePrompt('best shoes under 15000')">👟 Shoes</button>
+          <button onclick="usePrompt('best laptop under 100000')">💻 Laptop</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-area">
+      <div class="chat-panel">
+        <div class="panel-title">
+          <div class="bot-avatar">🤖</div>
+          <div><strong>ShopMate Assistant</strong><small>Online • Ready to help</small></div>
+        </div>
+
+        <div id="chat" class="chat">
+          <div class="message bot">
+            <div class="bubble">Hi! 👋 I'm your personalized shopping assistant.<br><br>
+            Tell me what you need, your budget, or both. For example: <b>“best phone under 50000”</b>.</div>
+          </div>
+        </div>
+
+        <form id="chatForm" class="input-row">
+          <input id="message" autocomplete="off" placeholder="Ask me what you want to buy..." />
+          <button type="submit">Send ➤</button>
+        </form>
+      </div>
+
+      <div class="products-panel">
+        <div class="products-header">
+          <div>
+            <p class="eyebrow">RECOMMENDATIONS</p>
+            <h2>Products for you</h2>
+          </div>
+          <span id="count">18 products</span>
+        </div>
+        <div id="products" class="products-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
