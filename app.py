@@ -1,7 +1,11 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template
 import re
 
 app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 PRODUCTS = [
     {"id": 1, "name": "Apple iPhone 16", "category": "mobile", "price": 79999, "rating": 4.7, "image": "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80"},
